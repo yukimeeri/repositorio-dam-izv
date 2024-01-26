@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piedra, papel o tijera</title>
+</head>
+
+<body>
+
+<script>
+/**/
+var ordenador = Math.round(Math.random() * 2) + 1;
+var jugador = prompt("Elija (1-piedra, 2-papel, 3-tijera)");
+
+/*Ver la eleccion de ordenador*/
+if (ordenador === 1)
+    alert("Ordenador elige piedra");
+else if (ordenador === 2)
+    alert("Ordenador elije papel");
+else
+    alert("Ordenador elige tijera");
+
+
+/*Resultados*/
+if (parseInt(jugador) === ordenador)
+    alert('Empate');
+else if (parseInt(jugador) === 1) 
+    if (ordenador === 2)
+        alert('Ordenador gana');
+    else
+        alert('Jugador gana');
+
+else if (parseInt(jugador) === 3) 
+    if (ordenador === 1)
+        alert('Ordenador gana');
+    else
+        alert('Jugador gana');
+
+else if (parseInt(jugador) === 2) 
+    if (ordenador === 3)
+        alert('Ordenador gana');
+    else
+        alert('Jugador gana');
+</script>
+
+</body>
+
+</html>
